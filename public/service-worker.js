@@ -18,3 +18,47 @@ const FILES_TO_CACHE = [
 ];
 
 // Install Service Worker
+self.addEventListener('install', function (evt) {
+  evt.waitUntil(
+    caches
+      .open(CACHE_NAME)
+      .then((cache) => {
+        console.log('Your files were pre-cached successfully!');
+        cache
+          // Pre-Cache Static Files
+          .addAll(FILES_TO_CACHE)
+          .then((result) => {
+            // Success
+            console.log('result of add all', result);
+          })
+          .catch((err) => {
+            // Error
+            console.log('Add all error: ', err);
+          });
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  );
+  // Activiate immediately once done
+  self.skipWaiting();
+});
+
+// Activate Service Worker
+self.addEventListener('activate', function (evt) {
+  evt.waitUntil(
+    caches.keys().then((keyList) => {
+      return Promise.all(
+        keyList.map((key) => {
+          if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
+            console.log('Removing old cache data', key);
+            return caches.delete(key);
+          }
+        })
+      );
+    })
+  );
+  self.clients.claim();
+});
+
+//fetch
