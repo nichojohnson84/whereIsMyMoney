@@ -6,20 +6,18 @@
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "start": "node server.js",
-      "lite-server": "lite-server",
-      "webpack": "webpack --watch",
-      "build": "webpack"
+      "lite-server": "lite-server"
     },
     "repository": {
       "type": "git",
       "url": "https://github.com/nichojohnson84/whereIsMyMoney.git"
     },
-    "author": "Nick Johnson",
+    "author": "Nick Johnson <nickcjohnson84@outlook.com> (https://github.com/nichojohnson84)",
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/coding-boot-camp/unit18hw/issues"
+      "url": "https://github.com/nichojohnson84/whereIsMyMoney/issues"
     },
-    "homepage": "",
+    "homepage": "https://github.com/nichojohnson84/whereIsMyMoney#readme",
     "dependencies": {
       "compression": "^1.7.4",
       "express": "^4.17.1",
