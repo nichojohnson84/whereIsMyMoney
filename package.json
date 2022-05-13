@@ -10,7 +10,7 @@
     },
     "repository": {
       "type": "git",
-      "url": "https://github.com/nichojohnson84/whereIsMyMoney.git"
+      "url": "git+https://github.com/nichojohnson84/whereIsMyMoney.git"
     },
     "author": "Nick Johnson <nickcjohnson84@outlook.com> (https://github.com/nichojohnson84)",
     "license": "MIT",
