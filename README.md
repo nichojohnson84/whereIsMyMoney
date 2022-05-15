@@ -15,7 +15,7 @@ This program is a Progressive Web Application or PWAdesigned to help someone kee
 
 - I learned a great deal about how to make an app or website run as efficiently as possible. I also never really even knew that many apps worked offline. I think I just always assumed I had a connection but that is the whole goal of something like this. We try to create an app that continues to function properly no matter where or when so that the user doesn't get annoyed with load times or having to restart because they lost a connection.
 
-## Installation and testing
+## Installation
 
 To install the program you would download the repository. Then using your terminal you can enter "npm start". At that point in your browser you can visit localhost:3001. From there I did my testing by using the inspect page feature by right clicking on the page and choosing "inspect". From there you can navigate to the "Network" tab at the top of the page and make sure that it still works when you disconnect your browser from the internet. This is also where you can use the "Console" tab to make sure all of your files are loading correctly. After you know it is working through the testing above it was deployed via Heroku and now it is simply a web address to visit and use.
 
